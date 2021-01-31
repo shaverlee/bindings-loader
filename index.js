@@ -54,7 +54,7 @@ module.exports = function(source, map, meta) {
 
       replaceSource.replace(
         match.index,
-        pattern.lastIndex,
+        pattern.lastIndex - 1,
         forPath
           ? JSON.stringify(addonRequest)
           : `require(${JSON.stringify(addonRequest)})`,
